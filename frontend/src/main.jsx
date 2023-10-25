@@ -5,11 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './normalize.css';
 import { HelmetProvider } from 'react-helmet-async';
+import { StoreProvider } from './screens/Store.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
+    <StoreProvider>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </StoreProvider>
   </React.StrictMode>
 );
